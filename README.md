@@ -50,6 +50,7 @@ const allQuestions = [
     },
     // Add more questions...
 ];
+```
 
 # License
 
