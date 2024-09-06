@@ -50,3 +50,13 @@ const allQuestions = [
     },
     // Add more questions...
 ];
+
+# License
+
+Created and Licensed by MCSynapse  
+© 2024 Mayukh Choudhury. All rights reserved.
+
+## Contributing
+
+Feel free to fork the repository and submit pull requests. Contributions are welcome!
+
