@@ -103,14 +103,19 @@ main {
     display: flex;
     justify-content: space-between;
     font-family: 'Nerko One';
+    flex-wrap: wrap;  /* This allows options to wrap to the next line */
+    justify-content: center;  /* Center the options */
 }
 
 .option-btn {
-    flex: 1;
+    flex: 0 1 auto;
     background-color: #ce93d8;
     color: #fff;
     border: none;
-    margin: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+    margin: 5px;
     margin-bottom: 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -245,3 +250,27 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+    .option-btn {
+        flex: 0 1 auto;  /* Ensure the buttons still only take up necessary space */
+        width: auto;  /* Auto width based on content */
+    }
+}
+
+.result-image {
+    width: 100%;
+    max-width: 300px; /* Adjust the maximum width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px;
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.result-message {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em; /* Adjust the font size as needed */
+    margin-top: 20px;
+    text-align: center;
+    color: #6a1b9a;
+}
+
