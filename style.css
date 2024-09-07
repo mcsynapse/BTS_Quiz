@@ -1,0 +1,247 @@
+/* -----------------------------------------------------------------------------
+ॐ नमो भगवते वासुदेवाय नमः|ॐ श्री महा कालिकायै नमः|ॐ नमः शिवाय
+With the blessings of Almighty.
+With the blessing of my mom and dad, Mili Mondal and Mrinal Kr. Choudhury.
+Thanks to my sister Srija.
+Project: [BTS Quiz]
+File: [style.css]
+
+Author: Mayukh Choudhury
+Date Created: 08/07/2024 [MM/DD/YYYY]
+Last Modified: 09/07/2024 [MM/DD/YYYY]
+Copyright © 2024 Mayukh Choudhury
+
+Special thanks to my ARMY friends: Rimila Ghosh and Rudraggi Singha.
+
+This code is the property of Mayukh Choudhury.
+Licensed under: [License Type MIT]
+----------------------------------------------------------------------------- */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    padding: 0 10px;
+}
+
+header {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Quicksand', Slab Serif;
+    font-weight: 1120;
+    color: #6a1b9a;
+    padding: 20px;
+    background-color: #f3e5f5;
+    border-bottom: 2px solid f3e5f5;
+}
+
+.bts-logo {
+    width: 100px; /* Increase the width of the BTS logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #6a1b9a;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+#question-window {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    animation: float 1s ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#question-text {
+    font-size: 26px;
+    font-family: 'Garamond';
+    margin-bottom: 20px;
+}
+
+#options-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Nerko One';
+}
+
+.option-btn {
+    flex: 1;
+    background-color: #ce93d8;
+    color: #fff;
+    border: none;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    text-align: centre;
+    padding: 10px 20px;
+}
+
+.option-btn:hover {
+    background-color: #ab47bc; /* Change to your desired hover color */
+}
+
+
+.option-btn.selected {
+    background-color: #ab47bc;
+}
+
+#navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#prev-btn, #next-btn {
+    background-color: #dda0dd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#prev-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: #6a1b9a;
+    background-color: #d8bfd8;
+    border-top: 2px solid #dda0dd;
+}
+
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 50%
+}
+
+.result-container {
+    background-color: #f0f0f5;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.result-container h2 {
+    font-size: 2rem;
+    color: #4b2e83;
+    margin-bottom: 15px;
+}
+
+.score-display {
+    font-size: 1.5rem;
+    color: #4b2e83;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.result-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.result-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.result-list li.correct {
+    background-color: #28a745; /* Green for correct answers */
+}
+
+.result-list li.wrong {
+    background-color: #dc3545; /* Red for wrong answers */
+}
+
+.result-list li .question-text {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.result-list li .answer-text {
+    font-style: italic;
+}
+
+.final-score {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4b2e83;
+}
+
+.restart-btn {
+    background-color: #4b2e83;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+    background-color: #6a44a8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
