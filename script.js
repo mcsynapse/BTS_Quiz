@@ -140,7 +140,7 @@ const questions = [
         },
         
         {
-        question: "Which song marked BTSâ€™s collaboration with American singer Halsey?",
+        question: "Which song marked BTS's collaboration with American singer Halsey?",
         options: ["Idol", "Fake Love", "Boy With Luv", "Mic Drop"],
         correct: 2
         },
@@ -224,7 +224,7 @@ const questions = [
         },
         
         {
-        question: "What is the color of BTSâ€™s official fandom?",
+        question: "What is the color of BTS's official fandom?",
         options: ["Blue", "Purple", "Black", "Pink"],
         correct: 1
         },
@@ -260,7 +260,7 @@ const questions = [
         },
         
         {
-        question: "In 2020, which song became BTSâ€™s first to be nominated for a Grammy Award?",
+        question: "In 2020, which song became BTS's first to be nominated for a Grammy Award?",
         options: ["Butter", "Dynamite", "On", "Life Goes On"],
         correct: 1
         },
@@ -290,13 +290,13 @@ const questions = [
         },
         
         {
-        question: "In which year did BTS become ambassadors for UNICEFâ€™s #ENDviolence campaign?",
+        question: "In which year did BTS become ambassadors for UNICEF's #ENDviolence campaign?",
         options: ["2016", "2017", "2018", "2019"],
         correct: 1
         },
         
         {
-        question: "What was the name of BTSâ€™s 2020 global online concert?",
+        question: "What was the name of BTS's 2020 global online concert?",
         options: ["Map of the Soul ON", "Speak Yourself", "Permission to Dance", "Bang Bang Con"],
         correct: 0
         },
@@ -308,7 +308,7 @@ const questions = [
         },
         
         {
-        question: "Which BTS memberâ€™s real name is Kim Nam-joon?",
+        question: "Which BTS member's real name is Kim Nam-joon?",
         options: ["Jin", "RM", "Suga", "J-Hope"],
         correct: 1
         },
@@ -712,11 +712,34 @@ function showResults() {
 
     resultHtml += `
             </ul>
-            <p class="final-score">Your Score: ${score} / 25</p>
+            <p class="final-score">Your Score: ${score} / 25</p>`;
+
+    // Add message and image based on the score
+    let message = '';
+    let imageUrl = '';
+
+    if (score > 15) {
+        message = '<p class="result-message">You have excellent knowledge.</p>';
+        imageUrl = "godd.jpg"; // Replace with the actual path to the image
+    } else if (score > 7) {
+        message = '<p class="result-message">You have decent knowledge.</p>';
+        imageUrl = "decent.webp"; // Replace with the actual path to the image
+    } else {
+        message = '<p class="result-message">You have poor knowledge. Better luck next time.</p>';
+        imageUrl = "poor.webp"; // Replace with the actual path to the image
+    }
+
+    resultHtml += `
+        <p class="score-message">${message}</p>
+        <img src="${imageUrl}" alt="Result Image" class="result-image">
+    `;
+
+    resultHtml += `
         </div>`;
     
     document.getElementById('quiz-container').innerHTML = resultHtml;
 }
+
 
 
 // Initialize the quiz
