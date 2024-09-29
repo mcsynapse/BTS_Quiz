@@ -1,14 +1,14 @@
 /* -----------------------------------------------------------------------------
 ॐ नमो भगवते वासुदेवाय नमः|ॐ श्री महा कालिकायै नमः|ॐ नमः शिवाय
 With the blessings of Almighty.
-With the blessing of my mom and dad, Mili Mondal and Mrinal Kr. Choudhury.
-Thanks to my sister Srija.
+With the blessing of my mom and dad.
+Thanks to my sister.
 Project: [BTS Quiz]
 File: [style.css]
 
 Author: Mayukh Choudhury
 Date Created: 08/07/2024 [MM/DD/YYYY]
-Last Modified: 09/07/2024 [MM/DD/YYYY]
+Last Modified: 09/29/2024 [MM/DD/YYYY]
 Copyright © 2024 Mayukh Choudhury
 
 Special thanks to my ARMY friends: Rimila Ghosh and Rudraggi Singha.
@@ -691,17 +691,16 @@ function nextQuestion() {
 
 // Calculate score and show results
 function showResults() {
-    score = 0;  // Reset the score before calculation
+    let calculatedScore = 0;  // Use a local variable for score calculation
     let resultHtml = `
         <div class="result-container">
             <h2>Your Results</h2>
-            <p class="score-display">Your Score: ${score} / 25</p>
             <ul class="result-list">`;
 
     selectedQuestions.forEach((question, index) => {
         const isCorrect = selectedAnswers[index] === question.correct;
         if (isCorrect) {
-            score++;
+            calculatedScore++;
         }
         resultHtml += `
             <li class="${isCorrect ? 'correct' : 'wrong'}">
@@ -710,35 +709,31 @@ function showResults() {
             </li>`;
     });
 
-    resultHtml += `
-            </ul>
-            <p class="final-score">Your Score: ${score} / 25</p>`;
-
-    // Add message and image based on the score
-    let message = '';
+    // Adding the final score message and the image based on score
+    let scoreMessage = '';
     let imageUrl = '';
 
-    if (score > 15) {
-        message = '<p class="result-message">You have excellent knowledge.</p>';
-        imageUrl = "godd.jpg"; // Replace with the actual path to the image
-    } else if (score > 7) {
-        message = '<p class="result-message">You have decent knowledge.</p>';
-        imageUrl = "decent.webp"; // Replace with the actual path to the image
+    if (calculatedScore > 15) {
+        scoreMessage = "You have excellent knowledge.";
+        imageUrl = "godd.jpg";
+    } else if (calculatedScore > 7) {
+        scoreMessage = "You have a decent knowledge.";
+        imageUrl = "decent.webp";
     } else {
-        message = '<p class="result-message">You have poor knowledge. Better luck next time.</p>';
-        imageUrl = "poor.webp"; // Replace with the actual path to the image
+        scoreMessage = "You have poor knowledge. Better luck Next time.";
+        imageUrl = "poor.webp"; 
     }
 
     resultHtml += `
-        <p class="score-message">${message}</p>
-        <img src="${imageUrl}" alt="Result Image" class="result-image">
-    `;
-
-    resultHtml += `
+            </ul>
+            <p class="final-score">Your Score: ${calculatedScore} / 25</p>
+            <p class="final-message" style="font-family: 'Quicksand', sans-serif;">${scoreMessage}</p>
+            <img src="${imageUrl}" alt="Score Image" class="score-image">
         </div>`;
     
     document.getElementById('quiz-container').innerHTML = resultHtml;
 }
+
 
 
 
