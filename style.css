@@ -1,14 +1,14 @@
 /* -----------------------------------------------------------------------------
 ॐ नमो भगवते वासुदेवाय नमः|ॐ श्री महा कालिकायै नमः|ॐ नमः शिवाय
 With the blessings of Almighty.
-With the blessing of my mom and dad, Mili Mondal and Mrinal Kr. Choudhury.
-Thanks to my sister Srija.
+With the blessing of my mom and dad.
+Thanks to my sister.
 Project: [BTS Quiz]
 File: [style.css]
 
 Author: Mayukh Choudhury
 Date Created: 08/07/2024 [MM/DD/YYYY]
-Last Modified: 09/07/2024 [MM/DD/YYYY]
+Last Modified: 09/29/2024 [MM/DD/YYYY]
 Copyright © 2024 Mayukh Choudhury
 
 Special thanks to my ARMY friends: Rimila Ghosh and Rudraggi Singha.
@@ -16,7 +16,6 @@ Special thanks to my ARMY friends: Rimila Ghosh and Rudraggi Singha.
 This code is the property of Mayukh Choudhury.
 Licensed under: [License Type MIT]
 ----------------------------------------------------------------------------- */
-
 
 body {
     font-family: Arial, sans-serif;
@@ -39,12 +38,14 @@ header {
     padding: 20px;
     background-color: #f3e5f5;
     border-bottom: 2px solid f3e5f5;
+    user-select: none;
 }
 
 .bts-logo {
-    width: 100px; /* Increase the width of the BTS logo */
-    height: auto; /* Maintain aspect ratio */
+    width: 100px;
+    height: auto;
     margin-bottom: 10px;
+    user-select: none;
 }
 
 h1 {
@@ -53,6 +54,7 @@ h1 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     color: #6a1b9a;
+    user-select: none;
 }
 
 main {
@@ -61,6 +63,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    user-select: none;
 }
 
 #quiz-container {
@@ -73,6 +76,7 @@ main {
     margin-bottom: 20px;
     width: 100%;
     max-width: 600px;
+    user-select: none;
 }
 
 #question-window {
@@ -82,6 +86,7 @@ main {
     border-radius: 15px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     animation: float 1s ease-in-out;
+    user-select: none;
 }
 
 @keyframes float {
@@ -97,17 +102,20 @@ main {
     font-size: 26px;
     font-family: 'Garamond';
     margin-bottom: 20px;
+    user-select: none;
 }
 
 #options-container {
     display: flex;
     justify-content: space-between;
     font-family: 'Nerko One';
-    flex-wrap: wrap;  /* This allows options to wrap to the next line */
-    justify-content: center;  /* Center the options */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    user-select: none;
 }
 
 .option-btn {
+    display: inline-block;
     flex: 0 1 auto;
     background-color: #ce93d8;
     color: #fff;
@@ -117,27 +125,32 @@ main {
     white-space: nowrap;
     margin: 5px;
     margin-bottom: 20px;
+    transition: background-color 0.3s ease;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     font-size: 18px;
     text-align: centre;
     padding: 10px 20px;
+    user-select: none;
 }
 
 .option-btn:hover {
-    background-color: #ab47bc; /* Change to your desired hover color */
+    background-color: #ab47bc;
 }
 
 
 .option-btn.selected {
     background-color: #ab47bc;
+    user-select: none;
 }
 
 #navigation-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    user-select: none;
 }
 
 #prev-btn, #next-btn {
@@ -148,6 +161,7 @@ main {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    user-select: none;
 }
 
 #prev-btn:disabled {
@@ -161,6 +175,7 @@ footer {
     color: #6a1b9a;
     background-color: #d8bfd8;
     border-top: 2px solid #dda0dd;
+    user-select: none;
 }
 
 .brand-logo {
@@ -177,12 +192,14 @@ footer {
     text-align: center;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-in-out;
+    user-select: none;
 }
 
 .result-container h2 {
     font-size: 2rem;
     color: #4b2e83;
     margin-bottom: 15px;
+    user-select: none;
 }
 
 .score-display {
@@ -190,12 +207,14 @@ footer {
     color: #4b2e83;
     margin-bottom: 20px;
     font-weight: bold;
+    user-select: none;
 }
 
 .result-list {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
+    user-select: none;
 }
 
 .result-list li {
@@ -204,47 +223,41 @@ footer {
     border-radius: 10px;
     transition: transform 0.3s ease;
     color: white;
+    user-select: none;
 }
 
 .result-list li.correct {
-    background-color: #28a745; /* Green for correct answers */
+    background-color: #83f28f; /* Green for correct answers */
+    user-select: none;
 }
 
 .result-list li.wrong {
-    background-color: #dc3545; /* Red for wrong answers */
+    background-color: #f94449; /* Red for wrong answers */
+    user-select: none;
 }
 
 .result-list li .question-text {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
+    user-select: none;
 }
 
 .result-list li .answer-text {
     font-style: italic;
+    user-select: none;
 }
 
 .final-score {
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.8rem;
     margin-top: 20px;
     font-weight: bold;
-    color: #4b2e83;
+    color: #6a1b9a;
+    user-select: none;
+    ;
 }
 
-.restart-btn {
-    background-color: #4b2e83;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.restart-btn:hover {
-    background-color: #6a44a8;
-}
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -253,24 +266,31 @@ footer {
 
 @media (max-width: 768px) {
     .option-btn {
-        flex: 0 1 auto;  /* Ensure the buttons still only take up necessary space */
-        width: auto;  /* Auto width based on content */
+        flex: 0 1 auto;
+        width: auto;
+        padding: 8px 12px;
     }
 }
 
-.result-image {
-    width: 100%;
-    max-width: 300px; /* Adjust the maximum width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 20px;
-    border-radius: 10px; /* Optional: Add rounded corners */
-}
 
-.result-message {
+.final-message {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.2em; /* Adjust the font size as needed */
+    font-size: 1.2em; 
     margin-top: 20px;
     text-align: center;
     color: #6a1b9a;
+    user-select: none;
 }
+
+.score-image {
+    width: 100%;       
+    height: auto;     
+    max-width: 150px; 
+    display: block;
+    margin: 20px auto; 
+    border-radius: 10px;
+    user-select: none;
+    user-select: none;
+}
+
 
